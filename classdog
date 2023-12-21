@@ -1,0 +1,20 @@
+class Dog:
+    def __init__(self, name: str, age: int):
+        self.set_name(name)
+        self.set_age(age)
+
+    def set_name(self, name: str):
+        if 2 <= len(name) <= 16:
+            self.name = name
+        else:
+            raise ValueError('Длина имени должна находиться в пределах от 2 до 16 символов')
+
+    def set_age(self, age: int):
+        if age < 0:
+            raise ValueError('Возраст не может быть отрицательным!')
+        self.age = age
+
+
+d1 = Dog('Шарик', 5)
+d2 = Dog('a', 13)
+d3 = Dog('Барбос', -1)
